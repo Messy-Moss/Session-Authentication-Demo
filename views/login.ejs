@@ -1,0 +1,23 @@
+<%- include('./partials/head.ejs') %>
+<body>
+
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="form-container">
+        <h1>Login</h1>
+        <form action="/login" method="POST">
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" name="email" required>
+            </div>
+    
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" name="password" required>
+            </div>
+            <button class="form-control">Login</button>
+        </form>
+    </div>
+
+</body>
+</html>

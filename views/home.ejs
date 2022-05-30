@@ -1,0 +1,38 @@
+<%- include('./partials/head.ejs') %>
+<body>
+
+    <%- include('./partials/nav.ejs') %>
+
+    <h1>All Messages</h1>
+    <main>
+        <% 
+            messages.forEach(m => {
+        %>
+        <div class="message">
+            <h2>
+                <%=m.title %>
+            </h2>
+            <p>
+                <%=m.content %>
+            </p>
+            <p>
+                <span>Created By: </span><%= m.owner.name %>
+            </p>
+        </div>
+        <%
+            }); 
+        %> 
+        
+        <div class="paginator">
+            <% 
+                for (let i = 0; i < parseInt(numOfPages); ++i) {
+            %>
+                <a href="<%=`/home?page=${i}`%>"> <%= i + 1 %> </a>
+            <% 
+                }
+            %>
+        </div>
+
+    </main>
+</body>
+</html>

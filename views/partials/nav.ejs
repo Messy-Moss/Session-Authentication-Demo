@@ -1,0 +1,19 @@
+<nav>
+    <ul>
+        <li><a href="/home">Home</a></li>
+        <div class="section">
+            <li><a href="/create-message">Create Message</a></li>
+            <% 
+                if (isAuth) {
+            %>
+                <li id="logout"><a href="#">Logout</a></li>
+            <% 
+                } else {
+            %>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+            <% } %>
+
+        </div>
+    </ul>
+</nav>

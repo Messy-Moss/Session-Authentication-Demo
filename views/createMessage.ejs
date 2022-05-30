@@ -1,0 +1,17 @@
+<%- include('./partials/head.ejs') %>
+<body>
+
+    <%- include('./partials/nav.ejs') %>
+
+    <h1>Create Message</h1>
+    <form action="create-message" method="POST">
+        <div>
+            <input type="text" name="title" placeholder="title">
+        </div>
+        <div>
+            <textarea name="content"></textarea>
+        </div>
+        <button>create message</button>
+    </form>
+</body>
+</html>
